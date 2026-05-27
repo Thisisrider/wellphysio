@@ -179,13 +179,12 @@ export default function QueryForm() {
               return (
                 <React.Fragment key={step.id}>
                   <div className="flex flex-col items-center gap-2">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
-                      isCompleted
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${isCompleted
                         ? 'bg-emerald-500 text-white'
                         : isActive
                           ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-violet-400/30'
                           : 'bg-gray-100 text-gray-400'
-                    }`}>
+                      }`}>
                       {isCompleted ? <FaCheckCircle size={18} /> : <Icon size={16} />}
                     </div>
                     <span className={`text-xs font-semibold hidden sm:block ${isActive ? 'text-violet-600' : 'text-gray-400'}`}>
@@ -193,9 +192,8 @@ export default function QueryForm() {
                     </span>
                   </div>
                   {i < STEPS.length - 1 && (
-                    <div className={`flex-1 h-0.5 mx-2 rounded-full transition-colors duration-300 ${
-                      currentStep > step.id ? 'bg-emerald-500' : 'bg-gray-200'
-                    }`} />
+                    <div className={`flex-1 h-0.5 mx-2 rounded-full transition-colors duration-300 ${currentStep > step.id ? 'bg-emerald-500' : 'bg-gray-200'
+                      }`} />
                   )}
                 </React.Fragment>
               );
@@ -301,11 +299,10 @@ export default function QueryForm() {
                             type="button"
                             key={slot}
                             onClick={() => setFormData((p) => ({ ...p, preferredTime: slot }))}
-                            className={`py-2.5 px-3 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer ${
-                              formData.preferredTime === slot
+                            className={`py-2.5 px-3 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer ${formData.preferredTime === slot
                                 ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-md shadow-violet-400/20'
                                 : 'bg-gray-50 text-gray-700 border border-gray-200 hover:border-violet-300 hover:bg-violet-50'
-                            }`}
+                              }`}
                           >
                             {slot}
                           </button>
